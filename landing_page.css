@@ -42,6 +42,7 @@ body{
 #title{
     color: var(--font_color);
     cursor: pointer;
+    margin-right:50px;
 }
 
 #body{
@@ -52,6 +53,28 @@ body{
     justify-items: center;
 }
 
+#footer{
+    display: flex;
+    background-color: var(--header_color);
+    align-content: center;
+    justify-content: center;
+}
+
+.fa-brands{
+    cursor: pointer;
+    font-size: 30px;
+    color: #2196F3;
+    padding: 5px;
+}
+
+#resume{
+    display: none;
+}
+
+#about{
+    display: none;
+}
+
 .items{
     border: 2px solid;
     color: var(--border_color);
@@ -59,32 +82,4 @@ body{
     height: 70%;
     cursor: pointer;
     text-align: center;
-}
-
-#footer{
-    display:flex;
-    background-color: var(--header_color);
-    align-content: center;
-    justify-content: center;
-}
-
-.footer_button:hover{
-    text-decoration: underline;
-}
-
-.footer_button{
-    border: none;
-    background-color: var(--header_color);
-    cursor: pointer;
-    outline: none;
-}
-
-.footer_text{
-    font-size: 16px;
-    color: var(--font_color);
-    font-family: var(--text_font);
-}
-
-.fa-brands{
-    cursor: pointer;
 }
