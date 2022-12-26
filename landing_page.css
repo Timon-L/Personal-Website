@@ -5,6 +5,10 @@
     --text_font: Helvetica, arial, sans-serif;
 }
 
+*:focus {
+    outline: none;
+}
+
 html{
     margin: 0;
     height: 100%;
@@ -28,7 +32,6 @@ body{
     background-color: var(--header_color);
     font-family: var(--text_font);
     cursor: pointer;
-    outline: none;
 }
 
 #header{
