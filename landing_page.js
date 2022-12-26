@@ -1,40 +1,34 @@
-const items_list = document.getElementsByClassName("items");
+const header = document.getElementById("header");
+const buttons_list = document.getElementsByClassName("header_button");
 const resume = document.getElementById("resume");
 const about = document.getElementById("about");
-const heightOutput = document.querySelector('#height');
-const widthOutput = document.querySelector('#width');
+const content = document.getElementById("dropdown_content");
+const drop_btn = document.getElementById("drop_btn");
 
 let wide_toggle = true;
 let menu_toggled = false;
-
-/*  Adjust title position when scaling.
-*/
-function title_rescale(wide){
-    const title_default = {left:"calc(50% - 200px)"};
-    const title_scale = {left:"calc(15% - 200px)"};
-    if(wide){
-        title.style.left = title_default.left;
-    }
-    else{
-        title.style.left = title_scale.left;
-    }
-}
 
 /*  Hide/display top menu when scaling.
 */
 function top_display(wide){
     if(wide){
-        login.style.display = "initial";
-        sign_up.style.display = "initial";
-        rules.style.display = "initial";
-        stats.style.display = "initial";
+        for(i = 0; i < buttons_list.length; i++){
+            buttons_list[i].style.display = "initial";
+        }
     }
     else{
-        login.style.display = "none";
-        sign_up.style.display = "none";
-        rules.style.display = "none";
-        stats.style.display = "none";
+        for(i = 0; i < buttons_list.length; i++){
+            buttons_list[i].style.display = "none";
+        }
     }
+}
+
+function hide(item){
+    item.style.display = "none";
+}
+
+function display(item){
+    item.style.display = "initial";
 }
 
 /*  Hide/display dropdown button when scaling.
@@ -51,19 +45,14 @@ function dropdown_display(wide){
 /*  Re-adjust layout as window width changes.
 */  
 function rescale() {
-    heightOutput.textContent = window.innerHeight;
-    widthOutput.textContent = window.innerWidth;
-
     if(window.innerWidth < 700 && wide_toggle){
         wide_toggle = false;
-        title_rescale(wide_toggle);
         top_display(wide_toggle);
         dropdown_display(wide_toggle);
        
     }
     if(window.innerWidth >= 700 && !wide_toggle){
         wide_toggle = true;
-        title_rescale(wide_toggle);
         top_display(wide_toggle);
         dropdown_display(wide_toggle);
     }
