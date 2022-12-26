@@ -1,12 +1,16 @@
 const header = document.getElementById("header");
 const buttons_list = document.getElementsByClassName("header_button");
+const item_list = document.getElementsByClassName("items");
 const resume = document.getElementById("resume");
 const about = document.getElementById("about");
 const content = document.getElementById("dropdown_content");
 const drop_btn = document.getElementById("drop_btn");
+const left_arrow = document.getElementById("left");
+const right_arrow = document.getElementById("right");
 
 let wide_toggle = true;
 let menu_toggled = false;
+let project_no = 0;
 
 /*  Hide/display top menu when scaling.
 */
@@ -76,11 +80,35 @@ function dropdown_event(){
     content.addEventListener("mouseleave", function(){
         content.style.display = "none";
         menu_toggled = false;
-    })
+    });
+}
+
+function scroll(){
+    left_arrow.addEventListener("click", function(){
+        item_list[project_no].style.display = "none";
+        if(project_no == 0){
+            project_no = 2;
+        }
+        else{
+            project_no -= 1;
+        }
+        item_list[project_no].style.display = "initial";
+    });
+    right_arrow.addEventListener("click", function(){
+        item_list[project_no].style.display = "none";
+        if(project_no == 2){
+            project_no = 0;
+        }
+        else{
+            project_no += 1;
+        }
+        item_list[project_no].style.display = "initial";
+    });
 }
 
 window.onload = function(){
     dropdown_event();
+    scroll();
     rescale();
 }
 
