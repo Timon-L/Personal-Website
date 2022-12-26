@@ -91,8 +91,17 @@ body{
     display: none;
 }
 
-#about{
+#contact{
     display: none;
+}
+
+#about{
+    font-family: var(--text_font);
+    font-size: 3em;
+    color: var(--font_color);
+    text-align: center;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 #projects{

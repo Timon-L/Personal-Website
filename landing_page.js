@@ -1,12 +1,21 @@
 const header = document.getElementById("header");
 const buttons_list = document.getElementsByClassName("header_button");
 const item_list = document.getElementsByClassName("items");
+//Body elements.
 const resume = document.getElementById("resume");
 const about = document.getElementById("about");
+const projects = document.getElementById("projects");
+const contact = document.getElementById("contact");
+const title = document.getElementById("title");
+const resume_btn = document.getElementById("resume_btn");
+const projects_btn = document.getElementById("projects_btn");
+const contact_btn = document.getElementById("contact_btn");
+//Dropdown elements.
 const content = document.getElementById("dropdown_content");
 const drop_btn = document.getElementById("drop_btn");
 const left_arrow = document.getElementById("left");
 const right_arrow = document.getElementById("right");
+const children = document.getElementById("body").children;
 
 let wide_toggle = true;
 let menu_toggled = false;
@@ -25,14 +34,6 @@ function top_display(wide){
             buttons_list[i].style.display = "none";
         }
     }
-}
-
-function hide(item){
-    item.style.display = "none";
-}
-
-function display(item){
-    item.style.display = "initial";
 }
 
 /*  Hide/display dropdown button when scaling.
@@ -83,6 +84,16 @@ function dropdown_event(){
     });
 }
 
+/* Hide all element within body
+*/
+function hide_all(){
+    for(i = 0; i < children.length; i++){
+        children[i].style.display = "none";
+    }
+}
+
+/* Project navigation, scroll left or right
+*/
 function scroll(){
     left_arrow.addEventListener("click", function(){
         item_list[project_no].style.display = "none";
@@ -106,10 +117,30 @@ function scroll(){
     });
 }
 
+function menu_select(){
+    title.addEventListener("click", function(){
+        hide_all();
+        about.style.display = "initial";
+    });
+    resume_btn.addEventListener("click", function(){
+        hide_all();
+        resume.style.display = "initial";
+    });
+    projects_btn.addEventListener("click", function(){
+        hide_all();
+        projects.style.display = "grid";
+    });
+    contact_btn.addEventListener("click", function(){
+        hide_all();
+        contact.style.display = "initial";
+    });
+}
+
 window.onload = function(){
     dropdown_event();
     scroll();
     rescale();
+    menu_select();
 }
 
 window.onresize = rescale;
