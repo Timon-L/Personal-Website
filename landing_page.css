@@ -97,11 +97,11 @@ body{
 
 #about{
     font-family: var(--text_font);
-    font-size: 2em;
+    font-size: 2rem;
     color: var(--font_color);
     text-align: center;
-    padding-left: 6em;
-    padding-right: 6em;
+    padding-left: 10rem;
+    padding-right: 10rem;
 }
 
 #projects{
