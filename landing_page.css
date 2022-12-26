@@ -3,6 +3,7 @@
     --font_color: #d3e5fa;
     --border_color: #c7cfd8;
     --text_font: Helvetica, arial, sans-serif;
+    --alt_color: #2196F3;
 }
 
 *:focus {
@@ -50,7 +51,7 @@ body{
 
 #body{
     display: grid;
-    grid-template-columns: 1fr 6fr 6fr 1fr;
+    grid-template-columns: 1fr 6fr 1fr;
     background-color: var(--header_color);
     align-items: center;
     justify-items: center;
@@ -66,7 +67,7 @@ body{
 .fa-brands{
     cursor: pointer;
     font-size: 30px;
-    color: #2196F3;
+    color: var(--alt_color);
     padding: 5px;
 }
 
@@ -78,11 +79,16 @@ body{
     display: none;
 }
 
+#projects{
+    width:100%;
+    height:95%;
+}
+
 .items{
     border: 2px solid;
     color: var(--border_color);
-    width: 95%;
-    height: 70%;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
     text-align: center;
 }
@@ -107,13 +113,15 @@ body{
     width:25px;
     height:2px;
     left:15px;
-    background-color:var(--border_color);
+    background-color:var(--alt_color);
 }
 
 .menu_content{
     font-family:var(--text_font);
+    color:var(--font_color);
     position:relative;
-    left:-40px;
+    left:-35px;
+    top:5px;
     font-size:15px;
     font-weight:bold;
     text-align:left;
@@ -121,17 +129,18 @@ body{
     padding-top:8px;
     width:80px;
     height:27px;
+    cursor:pointer;
 }
 
 .menu_content:hover{
-    background-color:var(--light_color);
+    text-decoration: underline;
 }
 
 #drop_btn{
     width:60px;
     height:35px;
     position:absolute;
-    right:45px;
+    right:35px;
     top:85px;
     border:2px solid var(--border_color);
     background-color:var(--head_color);
@@ -141,7 +150,7 @@ body{
 }
 
 #drop_btn:hover {
-    background-color:var(--light_color);
+    background-color:var(--font_color);
 }
 
 #dropdown_content{
@@ -149,9 +158,9 @@ body{
     display:none;
     position:absolute;
     right:0px;
-    top:30px;
+    top:22px;
     width:80px;
     height:115px;
-    background-color:white;
-    box-shadow: 0px 5px 5px 0px var(--border_color);
+    background-color:rgb(31, 52, 66);
+    box-shadow: 0px 5px 5px 0px #00131f;
 }
