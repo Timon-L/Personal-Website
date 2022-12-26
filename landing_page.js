@@ -10,6 +10,9 @@ const title = document.getElementById("title");
 const resume_btn = document.getElementById("resume_btn");
 const projects_btn = document.getElementById("projects_btn");
 const contact_btn = document.getElementById("contact_btn");
+const drop_resume = document.getElementById("drop_resume");
+const drop_projects = document.getElementById("drop_projects");
+const drop_contact = document.getElementById("drop_contact");
 //Dropdown elements.
 const content = document.getElementById("dropdown_content");
 const drop_btn = document.getElementById("drop_btn");
@@ -131,6 +134,18 @@ function menu_select(){
         projects.style.display = "grid";
     });
     contact_btn.addEventListener("click", function(){
+        hide_all();
+        contact.style.display = "initial";
+    });
+    drop_resume.addEventListener("click", function(){
+        hide_all();
+        resume.style.display = "initial";
+    });
+    drop_projects.addEventListener("click", function(){
+        hide_all();
+        projects.style.display = "grid";
+    });
+    drop_contact.addEventListener("click", function(){
         hide_all();
         contact.style.display = "initial";
     });
