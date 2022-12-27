@@ -41,6 +41,7 @@ body{
     font-size: 16px;
     color: var(--font_color);
     font-family: var(--text_font);
+
 }
 
 #header{
@@ -109,10 +110,22 @@ body{
 
 #about{
     font-family: var(--text_font);
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--font_color);
     text-align: center;
-    padding-left: 5%;
+    padding: 12%;
+}
+
+#technical{
+    font-size: 1.5rem;
+    font-family: var(--text_font);
+    color: var(--alt_color);
+    text-align: center;
+    padding-top: 3rem;
+}
+
+#tech_icons{
+    padding-top: 10px;
 }
 
 #projects{
