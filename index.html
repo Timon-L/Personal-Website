@@ -12,38 +12,82 @@
     <body>
         <div id="header">
             <h1 id="title">Timon Liu</h1>
-            <button id="resume_btn" class="header_button">RESUME</button>
+            <button id="resume_btn" class="header_button"><a id="resume_link" href="/Resume/Timon Liu CV 24th November 2022.pdf" download>RESUME</a></button>
             <button id="projects_btn" class="header_button">PROJECTS</button>
             <button id="contact_btn" class="header_button">CONTACT</button>
         </div>
-        <div id="body">
+        <div id="center">
             <div style="display:none" id="projects">
-                <div id="left" class="arrows"><i class="fa-sharp fa-solid fa-arrow-left"></i></div>
+                <div id="left" class="arrows">
+                    <i class="fa-sharp fa-solid fa-arrow-left"></i>
+                </div>
                 <div class="items" >
-                    <img>
+                    <div class="image_cont">
+                        <a href="https://github.com/Timon-L/CITS3200-Dental-Application">
+                            <img class="pro_img" src="/image/Screenshot_20221227_074243_Expo Go.jpg" alt="Oral Compass Application">
+                        </a>
+                    </div>
+                    <div class="pro_desc">
+                        <a class="title_link" href="https://github.com/Timon-L/CITS3200-Dental-Application">
+                            <h1 class="text project_title">Oral Compass Application</h1>
+                        </a>
+                        <p class="text paragraph">Mobile application developed by a team of UWA students for Dr. Yulianna Shiikha and stakeholders living in rural area.
+                             Provide users with fun daily quiz, dental hygiene informations and dentist addresses and contacts.
+                        </p>
+                    </div>
                 </div>
                 <div class="items" style="display:none">
-                    <img>
+                    <div class="image_cont">
+                        <a href="https://github.com/Timon-L/ELEC3020">
+                            <img class="pro_img" src="/image/arduino_cropped.jpg" alt="Embedded system RC robot">
+                        </a>
+                    </div>
+                    <div class="pro_desc">
+                        <a class="title_link" href="https://github.com/Timon-L/ELEC3020">
+                            <h1 class="text project_title">GPS Guided Robot</h1>
+                        </a>
+                        <p class="text paragraph">A modified hobby grade RC car with dedicated steering servo and eletronic speed control. 
+                            Given a set of longitude and latitude coordinates, the robot will move to the location and drives back to the starting position. 
+                            Built with Arduino Nano, U-blox NEO-6M GPS and coded in C/C++ using arduino IDE and libraries.
+                        </p>
+                    </div>
                 </div>
                 <div class="items" style="display:none">
-                    <img>
+                    <div class="image_cont">
+                        <a href="https://github.com/Timon-L/CITS3002-Project">
+                            <img class="pro_img" src="/image/Remote-compiling-task-specifications_Q640.jpg" alt="Remote compilation">
+                        </a>
+                    </div>
+                    <div class="pro_desc">
+                        <a class="title_link" href="https://github.com/Timon-L/CITS3002-Project">
+                            <h1 class="text project_title">Remote Compilation</h1>
+                        </a>
+                        <p class="text paragraph">Developing two distinct clients and one server. 
+                            The project demostrates the capability of executing multiple instances of the server programs on one physical computer using networking protocols.
+                        </p>
+                    </div>
                 </div>
-                <div id="right" class="arrows"><i class="fa-sharp fa-solid fa-arrow-right"></i></div>
+                <div id="right" class="arrows">
+                    <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                </div>
             </div>
-            <div id="resume"></div>
             <div id="contact"></div>
-            <div id="about">I am a recent software engineering graduate located in Perth, pursuing my passion in front-end development and embedded systems.</div>
+            <div id="about">I am a software engineering graduate located in Perth, pursuing my passion in front-end development and embedded systems.</div>
         </div>
         <div id="footer">
-            <a href="https://github.com/Timon-L"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/timon-liu-576112168/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Timon-L">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/timon-liu-576112168/">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
         </div>
         <button id="drop_btn">
             <div id="icon_one" class="menu_icon"></div>
             <div id="icon_two" class="menu_icon"></div>
             <div id="icon_three" class="menu_icon"></div>
             <ul id="dropdown_content">
-                <li id="drop_resume" class="menu_content" >RESUME</li>
+                <li id="drop_resume" class="menu_content" ><a id="resume_link" href="/Resume/Timon Liu CV 24th November 2022.pdf" download>RESUME</a></li>
                 <li id="drop_projects" class="menu_content" >PROJECTS</li>
                 <li id="drop_contact" class="menu_content" >CONTACT</li>
             </ul>

@@ -20,6 +20,7 @@ body{
     min-height: 100%;
     display:grid;
     grid-template-rows: 1fr 6fr 1fr;
+    background-color: var(--header_color);
 }
 
 .header_button:hover{
@@ -35,21 +36,29 @@ body{
     cursor: pointer;
 }
 
+#resume_link{
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--font_color);
+    font-family: var(--text_font);
+}
+
 #header{
     display: grid;
     grid-template-columns: 2fr repeat(15, 1fr);
-    padding-left: 10%;
     padding-top: 30px;
     background-color: var(--header_color);
+    position:relative;
+    left:5%;
 }
 
 #title{
     color: var(--font_color);
     cursor: pointer;
-    margin-right:50px;
+    margin-right: 15%;
 }
 
-#body{
+#center{
     display: flex;
     background-color: var(--header_color);
     align-items: center;
@@ -76,19 +85,22 @@ body{
     cursor: pointer;
 }
 
-.fa-arrow-left{
-    padding-left:50px;
-}
-
 .arrows{
-    display:flex;
+    display: flex;
     align-items: center;
-    width:clamp(40px, 5%, 100px);
-    padding:20px;
+    width: clamp(40px, 5%, 100px);
 }
 
-#resume{
-    display: none;
+#left{
+    position:relative;
+    top:0px;
+    left:0px;
+}
+
+#right{
+    position:relative;
+    top:0px;
+    left:0px;
 }
 
 #contact{
@@ -100,20 +112,69 @@ body{
     font-size: 2rem;
     color: var(--font_color);
     text-align: center;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 5%;
 }
 
 #projects{
     display: grid;
     grid-template-columns: 1fr 16fr 1fr;
-    width:100%;
-    height:95%;
+    width: 100%;
+    height: 95%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.pro_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image_cont:hover{
+    box-shadow: 0 0 5px 3px rgba(24, 190, 245, 0.5);
+}
+
+.image_cont{
+    width: 320px;
+    height: 410px;
+    overflow: hidden;
+    border: 3px solid var(--alt_color);
+    border-radius: 5px;
+    cursor: pointer;
+    flex: none;
+}
+
+.pro_desc{
+    padding-left: 3%;
+}
+
+.text{
+    font-family: var(--text_font);
+    color: var(--font_color);
+}
+
+.project_title{
+    text-align: left;
+    font-size: 50px;
+}
+
+.project_title:hover{
+    text-decoration: underline;
+    color: var(--alt_color);
+}
+
+.title_link{
+    text-decoration: none;
+}
+
+.paragraph{
+    width: 70%;
+    text-align: left;
+    font-size: 18px;
 }
 
 .items{
-    border: 1px solid;
-    color: var(--border_color);
+    display:flex;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -166,7 +227,7 @@ body{
     width:60px;
     height:35px;
     position:absolute;
-    right:35px;
+    right:5%;
     top:85px;
     border:2px solid var(--border_color);
     background-color:var(--head_color);
