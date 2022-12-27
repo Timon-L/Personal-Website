@@ -167,6 +167,36 @@ body{
     text-decoration: none;
 }
 
+#dental_demo{
+    text-decoration: none;
+    flex: none;
+    position: relative;
+    top: 35px;
+}
+
+.demo_text{
+    width: 160px;
+    text-decoration: none;
+    font-weight: bold;
+    border: solid 3px;
+}
+
+.demo_text:hover{
+    color: var(--alt_color);
+    box-shadow: 0 0 5px 3px rgba(24, 190, 245, 0.5);
+}
+
+.language_cont{
+    flex: none;
+    width: 180px;
+    position: relative;
+    top: 35px;
+}
+
+.colored{
+    font-size: 56px;
+}
+
 .paragraph{
     width: 70%;
     text-align: left;
