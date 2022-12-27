@@ -105,7 +105,34 @@ body{
 }
 
 #contact{
+    width: 100%;
     display: none;
+    grid-template-columns: 1fr;
+    padding-left: 5%
+}
+
+#email{
+    font-family: var(--text_font);
+    font-size: 2rem;
+    color: var(--font_color);
+    text-align: center;
+    text-decoration: none;
+}
+
+#github{
+    font-family: var(--text_font);
+    font-size: 2rem;
+    color: var(--font_color);
+    text-align: center;
+    text-decoration: none;
+}
+
+#linkedin{
+    font-family: var(--text_font);
+    font-size: 2rem;
+    color: var(--font_color);
+    text-align: center;
+    text-decoration: none;
 }
 
 #about{

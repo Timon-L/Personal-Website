@@ -14,6 +14,7 @@ const drop_contact = document.getElementById("drop_contact");
 const project_imgs = document.getElementsByClassName("project_img");
 const desc_list = document.getElementsByClassName("pro_desc");
 const cont_list = document.getElementsByClassName("image_cont");
+const brand_list = document.getElementsByClassName("fa-brands");
 //Dropdown elements.
 const content = document.getElementById("dropdown_content");
 const drop_btn = document.getElementById("drop_btn");
@@ -131,6 +132,18 @@ function hide_all(){
     }
 }
 
+function hide_media_icon(){
+    for(i = 0; i < brand_list.length; i++){
+        brand_list[i].style.display = "none";
+    }
+}
+
+function show_media_icon(){
+    for(i = 0; i < brand_list.length; i++){
+        brand_list[i].style.display = "initial";
+    }
+}
+
 /* Project navigation, scroll left or right
 */
 function scroll(){
@@ -159,23 +172,28 @@ function scroll(){
 function menu_select(){
     title.addEventListener("click", function(){
         hide_all();
+        show_media_icon();
         about.style.display = "initial";
     });
     projects_btn.addEventListener("click", function(){
         hide_all();
+        show_media_icon();
         projects.style.display = "grid";
     });
     contact_btn.addEventListener("click", function(){
         hide_all();
-        contact.style.display = "initial";
+        hide_media_icon();
+        contact.style.display = "grid";
     });
     drop_projects.addEventListener("click", function(){
         hide_all();
+        show_media_icon();
         projects.style.display = "grid";
     });
     drop_contact.addEventListener("click", function(){
         hide_all();
-        contact.style.display = "initial";
+        hide_media_icon();
+        contact.style.display = "grid";
     });
 }
 
