@@ -13,6 +13,7 @@ const drop_projects = document.getElementById("drop_projects");
 const drop_contact = document.getElementById("drop_contact");
 const project_imgs = document.getElementsByClassName("project_img");
 const desc_list = document.getElementsByClassName("pro_desc");
+const imageCont_list = document.getElementsByClassName("image_cont")
 const cont_list = document.getElementsByClassName("image_cont");
 const brand_list = document.getElementsByClassName("fa-brands");
 //Dropdown elements.
@@ -54,18 +55,22 @@ function dropdown_display(wide){
 
 function hide_desc(wide){
     if(wide){
-        for(i = 0;i < desc_list.length; i++){
-            desc_list[i].style.display = "initial";
+        for(i = 0;i < imageCont_list.length; i++){
+            imageCont_list[i].style.display = "initial";
+            left_arrow.style.display = "initial";
+            right_arrow.style.display = "initial";
         }
     }
     else{
-        for(i = 0;i < desc_list.length; i++){
-            desc_list[i].style.display = "none";
+        for(i = 0;i < imageCont_list.length; i++){
+            imageCont_list[i].style.display = "none";
+            left_arrow.style.display = "none";
+            right_arrow.style.display = "none";
         }
     }
 }
 
-function move_arrow(wide){
+/* function move_arrow(wide){
     if(wide){
         left_arrow.style.position = "relative";
         right_arrow.style.position = "relative";
@@ -83,7 +88,7 @@ function move_arrow(wide){
         right_arrow.style.left= "70%";
     }
 }
-
+ */
 /*  Re-adjust layout as window width changes.
 */  
 function rescale() {
@@ -91,14 +96,12 @@ function rescale() {
         wide_toggle = false;
         top_display(wide_toggle);
         dropdown_display(wide_toggle);
-        move_arrow(wide_toggle);
         hide_desc(wide_toggle);
     }
     if(window.innerWidth >= 700 && !wide_toggle){
         wide_toggle = true;
         top_display(wide_toggle);
         dropdown_display(wide_toggle);
-        move_arrow(wide_toggle);
         hide_desc(wide_toggle);
     }
 

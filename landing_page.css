@@ -25,6 +25,7 @@ body{
 
 .header_button:hover{
     text-decoration: underline;
+    color:var(--alt_color);
 }
 
 .header_button{
@@ -41,7 +42,10 @@ body{
     font-size: 1rem;
     color: var(--font_color);
     font-family: var(--text_font);
+}
 
+#resume_link:hover{
+    color:var(--alt_color);
 }
 
 #header{
@@ -57,6 +61,10 @@ body{
     color: var(--font_color);
     cursor: pointer;
     margin-right: 15%;
+}
+
+#title:hover{
+    color:var(--alt_color);
 }
 
 #center{
@@ -78,6 +86,11 @@ body{
     font-size: 2rem;
     color: var(--alt_color);
     padding: 5px;
+}
+
+.fa-brands:hover{
+    box-shadow: 0 0 3px 3px rgba(24, 190, 245, 0.5);
+    border-radius: 2rem;
 }
 
 .fa-sharp{
@@ -119,6 +132,11 @@ body{
     text-decoration: none;
 }
 
+#email:hover{
+    color:var(--alt_color);
+    font-size:2.1rem;
+}
+
 #github{
     font-family: var(--text_font);
     font-size: 2rem;
@@ -127,12 +145,22 @@ body{
     text-decoration: none;
 }
 
+#github:hover{
+    color:var(--alt_color);
+    font-size:2.1rem;
+}
+
 #linkedin{
     font-family: var(--text_font);
     font-size: 2rem;
     color: var(--font_color);
     text-align: center;
     text-decoration: none;
+}
+
+#linkedin:hover{
+    color:var(--alt_color);
+    font-size:2.1rem;
 }
 
 #about{
