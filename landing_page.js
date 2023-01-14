@@ -16,6 +16,7 @@ const desc_list = document.getElementsByClassName("pro_desc");
 const imageCont_list = document.getElementsByClassName("image_cont")
 const cont_list = document.getElementsByClassName("image_cont");
 const brand_list = document.getElementsByClassName("fa-brands");
+const paragraph_list = document.getElementsByClassName("paragraph");
 //Dropdown elements.
 const content = document.getElementById("dropdown_content");
 const drop_btn = document.getElementById("drop_btn");
@@ -55,22 +56,22 @@ function dropdown_display(wide){
 
 function hide_desc(wide){
     if(wide){
-        for(i = 0;i < imageCont_list.length; i++){
+        for(i = 0; i < imageCont_list.length; i++){
             imageCont_list[i].style.display = "initial";
-            left_arrow.style.display = "initial";
-            right_arrow.style.display = "initial";
+            paragraph_list[i].style.width = "70%";  
         }
+        move_arrow(wide);
     }
     else{
         for(i = 0;i < imageCont_list.length; i++){
             imageCont_list[i].style.display = "none";
-            left_arrow.style.display = "none";
-            right_arrow.style.display = "none";
+            paragraph_list[i].style.width = "100%";
         }
+        move_arrow(wide);
     }
 }
 
-/* function move_arrow(wide){
+function move_arrow(wide){
     if(wide){
         left_arrow.style.position = "relative";
         right_arrow.style.position = "relative";
@@ -82,13 +83,13 @@ function hide_desc(wide){
     else{
         left_arrow.style.position = "absolute";
         right_arrow.style.position = "absolute";
-        left_arrow.style.top = "590px";
-        right_arrow.style.top= "590px";
-        left_arrow.style.left = "20%";
-        right_arrow.style.left= "70%";
+        left_arrow.style.top = "50%";
+        right_arrow.style.top= "50%";
+        left_arrow.style.left = "2%";
+        right_arrow.style.left= "90%";
     }
 }
- */
+
 /*  Re-adjust layout as window width changes.
 */  
 function rescale() {
