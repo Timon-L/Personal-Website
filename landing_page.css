@@ -189,21 +189,19 @@ body{
 .pro_img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-
-.image_cont:hover{
-    box-shadow: 0 0 5px 3px var(--glow_color);
 }
 
 .image_cont{
     width: 320px;
-    height: 410px;
+    height: 420px;
     overflow: hidden;
     border: 3px solid var(--alt_color);
     border-radius: 5px;
-    cursor: pointer;
     flex: none;
+}
+
+.image_cont:hover{
+    box-shadow: 0 0 5px 3px var(--glow_color);
 }
 
 .pro_desc{
