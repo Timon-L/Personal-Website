@@ -54,7 +54,9 @@ function dropdown_display(wide){
     }
 }
 
-function hide_desc(wide){
+/*Hide project image.
+*/
+function hide_project(wide){
     if(wide){
         for(i = 0; i < imageCont_list.length; i++){
             imageCont_list[i].style.display = "initial";
@@ -71,6 +73,8 @@ function hide_desc(wide){
     }
 }
 
+/*Readjust arrow position base on wide or small screen.
+*/
 function move_arrow(wide){
     if(wide){
         left_arrow.style.position = "relative";
@@ -93,17 +97,17 @@ function move_arrow(wide){
 /*  Re-adjust layout as window width changes.
 */  
 function rescale() {
-    if(window.innerWidth < 700 && wide_toggle){
+    if(window.innerWidth < 900 && wide_toggle){
         wide_toggle = false;
         top_display(wide_toggle);
         dropdown_display(wide_toggle);
-        hide_desc(wide_toggle);
+        hide_project(wide_toggle);
     }
-    if(window.innerWidth >= 700 && !wide_toggle){
+    if(window.innerWidth >= 900 && !wide_toggle){
         wide_toggle = true;
         top_display(wide_toggle);
         dropdown_display(wide_toggle);
-        hide_desc(wide_toggle);
+        hide_project(wide_toggle);
     }
 
 }
@@ -173,6 +177,8 @@ function scroll(){
     });
 }
 
+/* Page change function, changes page base on which menu is selected.
+*/
 function menu_select(){
     title.addEventListener("click", function(){
         hide_all();

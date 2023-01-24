@@ -19,48 +19,47 @@ body{
     margin: 0;
     min-height: 100%;
     display:grid;
-    grid-template-rows: 1fr 7fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
     background-color: var(--header_color);
-}
-
-.header_button:hover{
-    text-decoration: underline;
-    color:var(--alt_color);
 }
 
 .header_button{
     border: none;
-    font-size: 1rem;
-    color: var(--font_color);
     background-color: var(--header_color);
-    font-family: var(--text_font);
     cursor: pointer;
+    padding-top: 4px;
+    padding-right: 10px;
+}
+
+.header_font{
+    font-family: var(--text_font);
+    color:var(--alt_color);
+    color: var(--font_color);
+    font-size: 1.1rem;
+}
+
+.header_font:hover{
+    color:var(--alt_color);
 }
 
 #resume_link{
     text-decoration: none;
-    font-size: 1rem;
-    color: var(--font_color);
-    font-family: var(--text_font);
-}
-
-#resume_link:hover{
-    color:var(--alt_color);
 }
 
 #header{
     display: grid;
-    grid-template-columns: 2fr repeat(15, 1fr);
+    grid-template-columns: 3fr repeat(18, 1fr);
     padding-top: 2%;
     background-color: var(--header_color);
-    position:relative;
-    padding-left:10%;
+    position: relative;
+    padding-left: 7%;
 }
 
 #title{
     color: var(--font_color);
     cursor: pointer;
-    margin-right: 15%;
+    font-size: 2.5rem;
+    padding-right: 10px;
 }
 
 #title:hover{
@@ -77,20 +76,21 @@ body{
 #footer{
     display: flex;
     background-color: var(--header_color);
-    align-content: center;
     justify-content: center;
 }
 
 .fa-brands{
     cursor: pointer;
-    font-size: 2rem;
-    color: var(--alt_color);
-    padding: 5px;
+    font-size: 2.2rem;
+    color: var(--font_color);
+    padding-left: 10px;
+    position: relative;
+    top: 110px;
+    left: 10px;
 }
 
 .fa-brands:hover{
-    box-shadow: 0 0 3px 3px rgba(24, 190, 245, 0.5);
-    border-radius: 2rem;
+    color: var(--alt_color);
 }
 
 .fa-sharp{
@@ -169,7 +169,7 @@ body{
     font-size: 2.5rem;
     color: var(--font_color);
     text-align: center;
-    padding: 12%;
+    padding: 0 18% 0 20%;
 }
 
 #technical{
@@ -189,7 +189,7 @@ body{
     grid-template-columns: 1fr 16fr 1fr;
     width: 100%;
     height: 95%;
-    padding-left: 10%;
+    padding-left: 20%;
     padding-right: 15%;
 }
 
@@ -304,8 +304,6 @@ body{
 }
 
 .menu_content{
-    font-family:var(--text_font);
-    color:var(--font_color);
     position:relative;
     left:-35px;
     top:5px;
@@ -319,16 +317,22 @@ body{
     cursor:pointer;
 }
 
-.menu_content:hover{
-    text-decoration: underline;
+.content_font{
+    font-family: var(--text_font);
+    color:var(--font_color);
 }
+
+.content_font:hover{
+    color:var(--alt_color);
+}
+
 
 #drop_btn{
     width:60px;
     height:35px;
     position:absolute;
     right:5%;
-    top:85px;
+    top:65px;
     border:2px solid var(--border_color);
     background-color:var(--head_color);
     border-radius:4px;
