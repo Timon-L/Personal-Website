@@ -15,7 +15,7 @@ const project_imgs = document.getElementsByClassName("project_img");
 const desc_list = document.getElementsByClassName("pro_desc");
 const imageCont_list = document.getElementsByClassName("image_cont")
 const cont_list = document.getElementsByClassName("image_cont");
-const brand_list = document.getElementsByClassName("fa-brands");
+const brand_list = document.getElementsByClassName("brands");
 const paragraph_list = document.getElementsByClassName("paragraph");
 //Dropdown elements.
 const content = document.getElementById("dropdown_content");

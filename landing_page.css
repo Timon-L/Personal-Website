@@ -18,28 +18,38 @@ html{
 body{
     margin: 0;
     min-height: 100%;
-    display:grid;
+    display: grid;
     grid-template-rows: 1fr 4fr 1fr;
     background-color: var(--header_color);
+}
+
+#header:hover > .fade-effect{
+    opacity: 0.2;
+}
+
+#header:hover > .fade-effect:hover{
+    opacity: 1;
+    color: var(--alt_color);
+}
+
+#resume_link:hover{
+    color: var(--alt_color);
 }
 
 .header_button{
     border: none;
     background-color: var(--header_color);
     cursor: pointer;
-    padding-top: 4px;
-    padding-right: 10px;
+    padding-right: 16px;
+    position: relative;
+    top: 50px;
+    height: 50px;
 }
 
 .header_font{
     font-family: var(--text_font);
-    color:var(--alt_color);
     color: var(--font_color);
-    font-size: 1.1rem;
-}
-
-.header_font:hover{
-    color:var(--alt_color);
+    font-size: 1.2rem;
 }
 
 #resume_link{
@@ -49,7 +59,7 @@ body{
 #header{
     display: grid;
     grid-template-columns: 3fr repeat(18, 1fr);
-    padding-top: 2%;
+    padding-top: 40px;
     background-color: var(--header_color);
     position: relative;
     padding-left: 7%;
@@ -58,12 +68,7 @@ body{
 #title{
     color: var(--font_color);
     cursor: pointer;
-    font-size: 2.5rem;
-    padding-right: 10px;
-}
-
-#title:hover{
-    color:var(--alt_color);
+    font-size: 2.7rem;
 }
 
 #center{
@@ -79,7 +84,7 @@ body{
     justify-content: center;
 }
 
-.fa-brands{
+.brands{
     cursor: pointer;
     font-size: 2.2rem;
     color: var(--font_color);
@@ -89,7 +94,7 @@ body{
     left: 10px;
 }
 
-.fa-brands:hover{
+.brands:hover{
     color: var(--alt_color);
 }
 
@@ -105,75 +110,54 @@ body{
     width: clamp(40px, 5%, 100px);
 }
 
+
 #left{
-    position:relative;
-    top:0px;
-    left:0px;
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 
 #right{
-    position:relative;
-    top:0px;
-    left:0px;
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 
 #contact{
     width: 100%;
     display: none;
     grid-template-columns: 1fr;
-    padding-left: 5%
 }
 
-#email{
-    font-family: var(--text_font);
-    font-size: 2rem;
-    color: var(--font_color);
+#contact:hover > .contacts{
+    opacity: 0.2;
+}
+
+#contact:hover > .contacts:hover{
+    opacity: 1;
+    color: var(--alt_color);
+}
+
+.contacts{
     text-align: center;
     text-decoration: none;
-}
-
-#email:hover{
-    color:var(--alt_color);
-    font-size:2.1rem;
-}
-
-#github{
     font-family: var(--text_font);
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     color: var(--font_color);
-    text-align: center;
-    text-decoration: none;
-}
-
-#github:hover{
-    color:var(--alt_color);
-    font-size:2.1rem;
-}
-
-#linkedin{
-    font-family: var(--text_font);
-    font-size: 2rem;
-    color: var(--font_color);
-    text-align: center;
-    text-decoration: none;
-}
-
-#linkedin:hover{
-    color:var(--alt_color);
-    font-size:2.1rem;
+    padding-bottom: 10px;
 }
 
 #about{
     width: 100%;
     font-family: var(--text_font);
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
     color: var(--font_color);
     text-align: center;
     padding: 0 18% 0 20%;
 }
 
 #technical{
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
     font-family: var(--text_font);
     color: var(--alt_color);
     text-align: center;
@@ -281,77 +265,77 @@ body{
 }
 
 #icon_one {
-    position:absolute;
-    top:10px;
+    position: absolute;
+    top: 10px;
 }
 
 #icon_two {
-    position:absolute;
-    top:15px;
+    position: absolute;
+    top: 15px;
     
 }
 
 #icon_three {
-    position:absolute;
-    top:20px;
+    position: absolute;
+    top: 20px;
 }
 
 .menu_icon {
-    width:25px;
-    height:2px;
-    left:15px;
-    background-color:var(--alt_color);
+    width: 25px;
+    height: 2px;
+    left: 15px;
+    background-color: var(--alt_color);
 }
 
 .menu_content{
-    position:relative;
-    left:-35px;
-    top:5px;
-    font-size:15px;
-    font-weight:bold;
-    text-align:left;
-    padding-left:5px;
-    padding-top:8px;
-    width:80px;
-    height:27px;
-    cursor:pointer;
+    position: relative;
+    left: -35px;
+    top: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 8px;
+    width: 80px;
+    height: 27px;
+    cursor: pointer;
 }
 
 .content_font{
     font-family: var(--text_font);
-    color:var(--font_color);
+    color: var(--font_color);
 }
 
 .content_font:hover{
-    color:var(--alt_color);
+    color: var(--alt_color);
 }
 
 
 #drop_btn{
-    width:60px;
-    height:35px;
-    position:absolute;
-    right:5%;
-    top:65px;
-    border:2px solid var(--border_color);
-    background-color:var(--head_color);
-    border-radius:4px;
-    transition-duration:0.4s;
-    display:none;
+    width: 60px;
+    height: 35px;
+    position: absolute;
+    right: 5%;
+    top: 65px;
+    border: 2px solid var(--border_color);
+    background-color: var(--head_color);
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    display: none;
 }
 
 #drop_btn:hover {
-    background-color:var(--font_color);
+    background-color: var(--font_color);
 }
 
 #dropdown_content{
-    list-style-type:none;
-    display:none;
-    position:absolute;
-    right:0px;
-    top:22px;
-    width:80px;
-    height:115px;
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 22px;
+    width: 80px;
+    height: 115px;
     background-color:rgb(31, 52, 66);
     box-shadow: 0px 5px 5px 0px #00131f;
 }
