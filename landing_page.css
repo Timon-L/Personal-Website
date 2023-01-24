@@ -4,6 +4,7 @@
     --border_color: #c7cfd8;
     --text_font: Helvetica, arial, sans-serif;
     --alt_color: #2196F3;
+    --glow_color: rgba(24, 190, 245, 0.5);
 }
 
 *:focus {
@@ -63,7 +64,7 @@ body{
     background-color: var(--header_color);
     position: relative;
     padding-left: 10%;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
     height: 80px;
 }
 
@@ -92,7 +93,7 @@ body{
     color: var(--font_color);
     padding-left: 10px;
     position: relative;
-    top: 110px;
+    top: 95px;
     left: 10px;
     text-decoration: none;
 }
@@ -105,6 +106,11 @@ body{
     font-size: 2rem;
     color: var(--font_color);
     cursor: pointer;
+}
+
+.fa-sharp:hover{
+    color: var(--alt_color);
+    text-shadow:0px 0px 20px var(--alt_color), 0px 0px 20px var(--glow_color);
 }
 
 .arrows{
@@ -187,7 +193,7 @@ body{
 }
 
 .image_cont:hover{
-    box-shadow: 0 0 5px 3px rgba(24, 190, 245, 0.5);
+    box-shadow: 0 0 5px 3px var(--glow_color);
 }
 
 .image_cont{
@@ -215,8 +221,8 @@ body{
 }
 
 .project_title:hover{
-    text-decoration: underline;
     color: var(--alt_color);
+    text-shadow:0px 0px 25px var(--alt_color), 0px 0px 25px var(--glow_color);
 }
 
 .title_link{
