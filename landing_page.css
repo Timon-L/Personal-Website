@@ -40,7 +40,7 @@ body{
     border: none;
     background-color: var(--header_color);
     cursor: pointer;
-    padding-right: 16px;
+    padding: 0 10px 0 10px;
     position: relative;
     top: 50px;
     height: 50px;
@@ -59,10 +59,12 @@ body{
 #header{
     display: grid;
     grid-template-columns: 3fr repeat(18, 1fr);
-    padding-top: 40px;
+    padding-top: 2%;
     background-color: var(--header_color);
     position: relative;
-    padding-left: 7%;
+    padding-left: 10%;
+    margin-bottom: 2%;
+    height: 80px;
 }
 
 #title{
@@ -317,7 +319,7 @@ body{
     height: 35px;
     position: absolute;
     right: 5%;
-    top: 65px;
+    top: 85px;
     border: 2px solid var(--border_color);
     background-color: var(--head_color);
     border-radius: 4px;
