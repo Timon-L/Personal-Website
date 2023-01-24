@@ -92,6 +92,7 @@ body{
     position: relative;
     top: 110px;
     left: 10px;
+    text-decoration: none;
 }
 
 .brands:hover{
