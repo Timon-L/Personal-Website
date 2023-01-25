@@ -65,9 +65,9 @@ body{
     border: none;
     background-color: var(--header_color);
     cursor: pointer;
-    padding: 0 10px 0 10px;
+    padding: 0 0 0 20px;
     position: relative;
-    top: 50px;
+    top: 48px;
     height: 50px;
 }
 
@@ -95,7 +95,8 @@ body{
 #title{
     color: var(--font_color);
     cursor: pointer;
-    font-size: 2.7rem;
+    font-size: 2.6rem;
+    font-family: var(--text_font);
 }
 
 #center{
@@ -108,7 +109,7 @@ body{
 #footer{
     height: 2rem;
     display: flex;
-    background-color: var(--header_color);
+    background-color: none;
     justify-content: center;
     position: relative;
     top: 100px;
@@ -170,6 +171,7 @@ body{
 #contact:hover > .contacts:hover{
     opacity: 1;
     color: var(--alt_color);
+    text-shadow: var(--text_shadow);
 }
 
 .contacts{
@@ -212,7 +214,7 @@ body{
 
 .fill_in::before{
     background-color: var(--header_color);
-    animation: fill_up 1s steps(60) forwards;
+    animation: fill_up 0.8s steps(120) forwards;
 }
 
 #technical{
@@ -340,7 +342,6 @@ body{
 }
 
 .paragraph{
-    width: 70%;
     text-align: left;
     font-size: clamp(1.2rem, 3vw, 1.5rem);
 }

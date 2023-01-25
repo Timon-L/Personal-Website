@@ -60,14 +60,12 @@ function hide_project(wide){
     if(wide){
         for(i = 0; i < imageCont_list.length; i++){
             imageCont_list[i].style.display = "initial";
-            paragraph_list[i].style.width = "70%";  
         }
         move_arrow(wide);
     }
     else{
-        for(i = 0;i < imageCont_list.length; i++){
+        for(i = 0; i < imageCont_list.length; i++){
             imageCont_list[i].style.display = "none";
-            paragraph_list[i].style.width = "100%";
         }
         move_arrow(wide);
     }
@@ -97,13 +95,13 @@ function move_arrow(wide){
 /*  Re-adjust layout as window width changes.
 */  
 function rescale() {
-    if(window.innerWidth < 1000 && wide_toggle){
+    if(window.innerWidth < 1100 && wide_toggle){
         wide_toggle = false;
         top_display(wide_toggle);
         dropdown_display(wide_toggle);
         hide_project(wide_toggle);
     }
-    if(window.innerWidth >= 1000 && !wide_toggle){
+    if(window.innerWidth >= 1100 && !wide_toggle){
         wide_toggle = true;
         top_display(wide_toggle);
         dropdown_display(wide_toggle);
