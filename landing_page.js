@@ -97,13 +97,13 @@ function move_arrow(wide){
 /*  Re-adjust layout as window width changes.
 */  
 function rescale() {
-    if(window.innerWidth < 900 && wide_toggle){
+    if(window.innerWidth < 1000 && wide_toggle){
         wide_toggle = false;
         top_display(wide_toggle);
         dropdown_display(wide_toggle);
         hide_project(wide_toggle);
     }
-    if(window.innerWidth >= 900 && !wide_toggle){
+    if(window.innerWidth >= 1000 && !wide_toggle){
         wide_toggle = true;
         top_display(wide_toggle);
         dropdown_display(wide_toggle);
