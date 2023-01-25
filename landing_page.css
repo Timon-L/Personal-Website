@@ -163,7 +163,7 @@ body{
     font-size: clamp(1.9rem, 4vw, 2.5rem);
     color: var(--font_color);
     text-align: center;
-    padding: 5% 19% 0 18%;
+    padding: 50px 19% 0 18%;
 }
 
 #technical{
