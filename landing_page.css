@@ -5,6 +5,7 @@
     --text_font: Helvetica, Arial, sans-serif;
     --alt_color: #2196F3;
     --glow_color: rgba(24, 190, 245, 0.5);
+    --tooltip_color: #e0fbfc ;
 }
 
 *:focus {
@@ -256,10 +257,38 @@ body{
 
 .about_icons{
     font-size: clamp(3rem, 6vw, 4rem);
+    display: inline-block;
 }
 
 .project_icons{
     font-size: 4rem;
+    display: inline-block;
+}
+
+.tooltip{
+    display: flex;
+    visibility: hidden;
+    background-color: var(--tooltip_color);
+    color: var(--alt_color);
+    font-size: 1rem;
+    text-align: left;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 20px;
+    padding: 5px 8px 8px 8px;
+    border-radius: 10px;
+    z-index: 1;
+    border: solid 1px var(--alt_color);
+    font-weight: 505;
+    box-shadow: 0 0 5px 1px var(--alt_color);
+}
+
+.about_icons:hover .tooltip{
+    visibility: visible;
+}
+
+.project_icons:hover .tooltip{
+    visibility: visible;
 }
 
 .paragraph{
