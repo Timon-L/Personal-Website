@@ -11,12 +11,9 @@ const projects_btn = document.getElementById("projects_btn");
 const contact_btn = document.getElementById("contact_btn");
 const drop_projects = document.getElementById("drop_projects");
 const drop_contact = document.getElementById("drop_contact");
-const project_imgs = document.getElementsByClassName("project_img");
-const desc_list = document.getElementsByClassName("pro_desc");
 const imageCont_list = document.getElementsByClassName("image_cont")
 const cont_list = document.getElementsByClassName("image_cont");
 const brand_list = document.getElementsByClassName("brands");
-const paragraph_list = document.getElementsByClassName("paragraph");
 //Dropdown elements.
 const content = document.getElementById("dropdown_content");
 const drop_btn = document.getElementById("drop_btn");
@@ -56,39 +53,16 @@ function dropdown_display(wide){
 
 /*Hide project image.
 */
-function hide_project(wide){
+function hide_image(wide){
     if(wide){
         for(i = 0; i < imageCont_list.length; i++){
             imageCont_list[i].style.display = "initial";
         }
-        move_arrow(wide);
     }
     else{
         for(i = 0; i < imageCont_list.length; i++){
             imageCont_list[i].style.display = "none";
         }
-        move_arrow(wide);
-    }
-}
-
-/*Readjust arrow position base on wide or small screen.
-*/
-function move_arrow(wide){
-    if(wide){
-        left_arrow.style.position = "relative";
-        right_arrow.style.position = "relative";
-        left_arrow.style.top = "0px";
-        right_arrow.style.top= "0px";
-        left_arrow.style.left = "0px";
-        right_arrow.style.left= "0px";
-    }
-    else{
-        left_arrow.style.position = "absolute";
-        right_arrow.style.position = "absolute";
-        left_arrow.style.top = "50%";
-        right_arrow.style.top= "50%";
-        left_arrow.style.left = "2%";
-        right_arrow.style.left= "90%";
     }
 }
 
@@ -99,13 +73,13 @@ function rescale() {
         wide_toggle = false;
         top_display(wide_toggle);
         dropdown_display(wide_toggle);
-        hide_project(wide_toggle);
+        hide_image(wide_toggle);
     }
     if(window.innerWidth >= 1100 && !wide_toggle){
         wide_toggle = true;
         top_display(wide_toggle);
         dropdown_display(wide_toggle);
-        hide_project(wide_toggle);
+        hide_image(wide_toggle);
     }
 
 }
