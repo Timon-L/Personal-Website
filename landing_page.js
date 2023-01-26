@@ -206,9 +206,9 @@ function menu_select(){
 }
 
 window.onload = function(){
+    rescale();
     dropdown_event();
     scroll();
-    rescale();
     menu_select();
 }
 
