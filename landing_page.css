@@ -360,7 +360,7 @@ body{
 .paragraph{
     width: 100%;
     text-align: left;
-    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 
 .items{
