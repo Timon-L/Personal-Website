@@ -131,6 +131,7 @@ body{
     font-size: 2rem;
     color: var(--font_color);
     cursor: pointer;
+    padding: 0 15px 0 15px;
 }
 
 .fa-sharp:hover{
@@ -146,15 +147,21 @@ body{
 
 
 #left{
+    display: flex;
+    width: 100%;
     position: relative;
     top: 0px;
     left: 0px;
+    justify-content: right;
 }
 
 #right{
+    display: flex;
+    width: 100%;
     position: relative;
     top: 0px;
     left: 0px;
+    justify-content: left;
 }
 
 #contact{
@@ -242,15 +249,10 @@ body{
 
 #projects{
     display: grid;
-    grid-template-columns: 1fr 16fr 1fr;
+    grid-template-columns: 2fr 6fr 2fr;
     width: 100%;
     height: 600px;
-    padding: 20px 15% 0 15%;
-}
-
-.dummy_div{
-    display: none;
-    width: 100%;
+    padding-top: 20px;
 }
 
 .pro_img{
@@ -283,7 +285,7 @@ body{
 
 .project_title{
     text-align: left;
-    font-size: clamp(2.1rem, 4vw, 2.6rem);
+    font-size: clamp(2.2rem, 4vw, 2.6rem);
 }
 
 .project_title:hover{
@@ -299,7 +301,7 @@ body{
     text-decoration: none;
     flex: none;
     position: relative;
-    top: 1rem;
+    top:-0.5rem;
 }
 
 .demo_text{
@@ -307,7 +309,7 @@ body{
     text-decoration: none;
     font-weight: bold;
     border: solid 3px;
-    margin-left: 10px;
+    margin-left: 11px;
 }
 
 .demo_text:hover{
@@ -317,9 +319,8 @@ body{
 
 .language_cont{
     flex: none;
-    width: 14rem;
+    width: clamp(11rem, 20vw, 14rem);
     position: relative;
-    top: 1.5rem;
 }
 
 .about_icons{
@@ -328,7 +329,7 @@ body{
 }
 
 .project_icons{
-    font-size: 4rem;
+    font-size: clamp(3rem, 6vw, 4rem);
     display: inline-block;
 }
 
@@ -359,7 +360,7 @@ body{
 .paragraph{
     width: 100%;
     text-align: left;
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
 }
 
 .items{
